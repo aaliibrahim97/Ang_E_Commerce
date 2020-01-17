@@ -1,0 +1,97 @@
+.access-body {
+  padding-top: 8%;
+}
+
+h1 {
+  text-align: center;
+  font-size: 60px;
+}
+
+.wed-p {
+  text-align: center;
+  font-weight: 400;
+}
+
+.card {
+  margin-top: 15px;
+
+  border: none !important;
+}
+
+.modal-body {
+  color: black !important;
+  border-bottom-right-radius: 1.125rem ;
+  border-bottom-left-radius: 1.125rem ;
+}
+
+.modal-dialog .modal-content {
+  border-radius: 1.125rem !important;
+}
+
+.image-all-together {
+  width: 320px;
+  height: 500px;
+  position: relative;
+  margin: 50px auto;
+ }
+
+ .image-all-together span {
+  position: absolute;
+  background-color: orange;
+  transition: .3s;
+ }
+
+ .image-all-together .one {
+  left: 0;
+  top: 0;
+  width: 3px;
+  height: 0%;
+ }
+
+ .image-all-together .two {
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 0%;
+ }
+
+ .image-all-together .three {
+  right: 0;
+  bottom: 0;
+  width: 3px;
+  height: 0%;
+ }
+
+ .image-all-together .four {
+  top: 0;
+  right: 0;
+  height: 3px;
+  width: 0%;
+ }
+ .image-all-together:hover .one,
+ .image-all-together:hover .three
+ {
+  height: 100%;
+ }
+
+ .image-all-together:hover .two,
+ .image-all-together:hover .four
+ {
+  width: 100%;
+ }
+ .image-all-together:hover img {
+  transition-delay: .3s;
+  transition-duration: .3s;
+  opacity: .1;
+ }
+ h6 {
+  position: absolute;
+  top: 41%;
+  left: 32%;
+  color: orange;
+  font-size: 50px;
+  opacity: 0;
+ }
+ .image-all-together:hover h6 {
+  opacity: 1;
+ }

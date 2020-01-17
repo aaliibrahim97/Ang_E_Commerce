@@ -1,0 +1,92 @@
+.img{
+  display: flex;
+}
+.rgba-teal-strong-2{
+  background-color: rgba(255, 138, 138, 0.7);
+}
+.flex-center{
+  display: inline-grid !important;
+  text-align: center;
+}
+.white-text{
+  font-size: 110px;
+}
+.white-text2{
+  font-size: 110px;
+  color: black;
+}
+.head-text{
+  font-size: 20px;
+  font-weight: bold;
+}
+.text3{
+  font-size: 15px;
+  font-weight: 800;
+  font-family: monospace;
+}
+.waves-effect{
+  cursor: auto !important;
+}
+
+.check-it1,
+.check-it2{
+  border:none;
+  background: none;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.check-it1{
+  color: white;
+}
+.check-it2{
+  color: black;
+}
+
+.text-ender{
+  font-weight:bold;
+  border-bottom: .5px solid white;
+}
+.text-ender2{
+  font-weight:bold;
+  border-bottom: .5px solid black;
+}
+.specials{
+  margin-top: 150px;
+  text-align: center;
+}
+.outfits{
+  margin-top: 35px;
+  padding-right: 135px
+}
+@media only screen and (max-width: 320px) {
+  .white-text{
+    font-size: 25px;
+  }
+  .white-text2{
+    font-size: 25px;
+  }
+  .specials{
+    margin-top: 0px;
+  }
+  .check-it1,
+  .check-it2{
+    font-size: 5px;
+}
+
+}
+@media(min-width:360px){
+  .white-text{
+    font-size: 32px;
+  }
+  .white-text2{
+    font-size: 32px;
+  }
+}
+@media(min-width:1349px){
+  .white-text{
+    font-size: 110px;
+  }
+  .white-text2{
+    font-size: 110px;
+  }
+}
+

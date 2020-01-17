@@ -1,0 +1,57 @@
+#social {
+    background-color: white;
+    padding: 0;
+}
+
+#social .overlay {
+    // background: url("../img/slide_bg.png") repeat scroll 0 0 transparent;
+    padding: 100px 0 120px;
+}
+.social-header {
+  margin: 0 40px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  border-top: 1px solid black;
+  text-align: center;
+}
+.social-header h2 {
+  font-weight: 500;
+}
+.social-header p {
+  font-weight: 400;
+}
+.social-button {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.social-button li {
+    display: inline-block;
+}
+
+.social-button li:nth-child(2) {
+    margin: 0 75px;
+}
+
+.social-button li a {
+    border: 2px solid black;
+    border-radius: 50%;
+    color: black;
+    display: block;
+    height: 90px;
+    line-height: 96px;
+    width: 90px;
+
+    -webkit-transition: all 0.2s ease 0s;
+       -moz-transition: all 0.2s ease 0s;
+        -ms-transition: all 0.2s ease 0s;
+         -o-transition: all 0.2s ease 0s;
+            transition: all 0.2s ease 0s;
+}
+
+.social-button li a:hover {
+    color: orange;
+    border: 2px solid orange;
+}

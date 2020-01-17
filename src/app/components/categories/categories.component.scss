@@ -1,0 +1,28 @@
+.categories{
+  margin-top: 10px;
+  text-align: center;
+}
+
+h2 {
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+button {
+  background: none;
+  color: sienna;
+  border: 1.5px solid black;
+  padding: 13px;
+  font-weight: 500;
+  transition: .8s ease-in-out;
+  border-radius: 9px;
+}
+  #leather:hover {
+  background-color: pink;
+}
+  #wedding:hover {
+    background-color: rgba(226, 2, 62, 0.815);
+}
+  #access:hover{
+  background-color: rgba(255, 203, 104, 0.9);
+
+}

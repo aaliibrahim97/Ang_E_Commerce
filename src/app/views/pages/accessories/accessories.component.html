@@ -1,0 +1,53 @@
+<div class="container access-body">
+  <h1 class="animated fadeInDown">ACCESSORIES</h1>
+  <P class="wed-p animated fadeInDown">Get All What You Need And More.</P>
+  <div class="row">
+    <div class="col col-12 col-md-6 col-lg-4" *ngFor="let good of goods; index as i">
+      <!-- Card -->
+      <div class="card animated fadeInUp">
+        <a (click)="basicModal.show()">
+          <div class="image-all-together">
+            <h6>VIEW</h6>
+             <img class="card-img-top" [src]="good.photoUrl" alt="Card image cap">
+            <span class="one"></span>
+            <span class="two"></span>
+            <span class="three"></span>
+            <span class="four"></span>
+          </div>
+        </a>
+        <!-- Card content -->
+      </div>
+      <!-- Card --> <div mdbModal #basicModal="mdbModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myBasicModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close pull-right" aria-label="Close" (click)="basicModal.hide()">
+                  <span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title w-100" id="myModalLabel">Item View</h4>
+              </div>
+              <div class="modal-body">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-lg-6">
+                        <img  [src]="good.photoUrl" alt="Card image cap" width="200px" height="300px">
+                    </div>
+                    <div class="col-lg-6">
+                       <h3 class="card-title"><a>{{good.name | titlecase}}</a></h3>
+                       <p class="card-text">{{good.price | currency}}</p>
+                       <p class="card-text">{{good.description}}</p>
+                       <button class="btn btn-primary" (click)="addToCart(i)" *ngIf="add !== i">Add to cart</button>
+                        <div *ngIf="add === i">
+                          <input type="number" class="form-control" placeholder="Amount" #amount>
+                          <br>
+                          <button class="btn btn-success" (click)="buy(amount.value)">Buy</button>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  </div>
+</div>

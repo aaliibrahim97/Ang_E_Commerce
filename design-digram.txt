@@ -1,0 +1,11 @@
+1- Home Page
+
+2-Login/SignUp
+
+3-Cart
+
+4-Account (by myself)
+
+5-Orders (by myself)
+
+6-Goods

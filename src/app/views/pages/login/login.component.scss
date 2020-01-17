@@ -1,0 +1,22 @@
+:host.navbarcustom {
+  display: none !important;
+}
+
+body {
+  background-color: skyblue;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 9999;
+}
+#navbar {
+  display: none !important;
+}
+.form-body {
+  width: 43%;
+  margin: 0 29%;
+  padding-top: 83px !important;
+}
+.border-light{
+  border:none !important;
+}

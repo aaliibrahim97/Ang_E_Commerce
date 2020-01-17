@@ -1,0 +1,26 @@
+<div class="customTable">
+<table class="table customTable">
+  <thead class="red white-text">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Price</th>
+      <th scope="col">Amount</th>
+      <th scope="col">TOTAL</th>
+      <th scope="col">OPTIONS.</th>
+    </tr>
+  </thead>
+  <tbody>
+     <tr *ngFor="let item of cart; index as i">
+      <td>{{ item.name | titlecase}}</td>
+      <td>{{ item.price | currency}}</td>
+      <td> <input type="number" placeholder="Amount" [(ngModel)]="item.amount"></td>
+      <td>{{ (item.price * item.amount) | currency}}</td>
+      <td>
+        <button class="btn btn-primary" style="margin-right:3px" (click)="save(i)">Save</button>
+        <button class="btn btn-danger" (click)="delete(i)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+

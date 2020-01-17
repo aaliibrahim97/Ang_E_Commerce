@@ -1,0 +1,46 @@
+<body>
+  <!-- Default form register -->
+<form class="text-center border border-light p-5 form-body wow animated fadeInDown" #f="ngForm" (ngSubmit)="login(f)">
+
+  <p class="h4 mb-4">Log In</p>
+
+  <!-- E-mail -->
+  <input ngModel name="email" #email="ngModel" type="email"  class="form-control mb-4" placeholder="E-mail" email required>
+  <p style="color:red; font-weight: 400;" *ngIf="email.touched && email.errors?.required">E-mail is Required</p>
+
+  <!-- Password -->
+  <input ngModel name="password" #password="ngModel" type="password" class="form-control" placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock" required minlength="6">
+  <p style="color:red; font-weight: 400;" *ngIf="password.touched && password.errors?.required">Password is Required</p>
+
+  <!-- Newsletter -->
+  <div class="custom-control custom-checkbox">
+      <input type="checkbox" class="custom-control-input" id="defaultRegisterFormNewsletter">
+      <label class="custom-control-label" for="defaultRegisterFormNewsletter">Subscribe to our newsletter</label>
+  </div>
+
+  <!-- Sign up button -->
+  <button class="btn btn-info my-4 btn-block" type="submit" [disabled]="f.invalid">Login</button>
+  <br>
+  <a class="alert alert-success" routerLink='/register'>create an account</a>
+  <br>
+  <br>
+  <div class="alert alert-danger" *ngIf="errorMessage">{{ errorMessage }}</div>
+  <!-- Social register -->
+  <p>or sign up with:</p>
+
+  <a href="#" class="mx-2" role="button"><i class="fab fa-facebook-f light-blue-text"></i></a>
+  <a href="#" class="mx-2" role="button"><i class="fab fa-twitter light-blue-text"></i></a>
+  <a href="#" class="mx-2" role="button"><i class="fab fa-linkedin-in light-blue-text"></i></a>
+  <a href="#" class="mx-2" role="button"><i class="fab fa-github light-blue-text"></i></a>
+
+  <hr>
+
+  <!-- Terms of service -->
+  <p>By clicking
+      <em>Sign up</em> you agree to our
+      <a href="" target="_blank">terms of service</a>
+
+</form>
+<!-- Default form register -->
+
+</body>

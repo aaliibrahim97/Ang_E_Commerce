@@ -1,0 +1,77 @@
+<body>
+  <!-- Default form register -->
+<form class="text-center border border-light p-5 form-body wow animated fadeInDown" #f="ngForm" (ngSubmit)="signin(f)">
+
+  <p class="h4 mb-4">SIGN UP</p>
+
+  <div class="form-row mb-4">
+      <div class="col">
+          <!-- First name -->
+          <input ngModel name="firstName" #firstName="ngModel" type="text"  class="form-control" placeholder="First name" required>
+            <p style="color:red; font-weight: 400;" *ngIf="firstName.invalid && firstName.touched">First Name is Required</p>
+        </div>
+      <div class="col">
+          <!-- Last name -->
+          <input ngModel name="lastName" #lastName="ngModel" type="text"  class="form-control" placeholder="Last name" required>
+          <p style="color:red; font-weight: 400;" *ngIf="lastName.invalid  && lastName.touched">Last Name is Required</p>
+        </div>
+  </div>
+
+  <!-- E-mail -->
+  <input ngModel name="email" #email="ngModel" type="email"  class="form-control mb-4" placeholder="E-mail" email required>
+  <p style="color:red; font-weight: 400;" *ngIf="email.touched && email.errors?.required">E-mail is Required</p>
+  <p style="color:red; font-weight: 400;" *ngIf="email.touched && email.errors?.email">Doesn't Fit</p>
+
+  <!-- Password -->
+  <input ngModel name="password" #password="ngModel" type="password" class="form-control" placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock" required minlength="6">
+  <p style="color:red; font-weight: 400;" *ngIf="password.touched && password.errors?.required">Password is Required</p>
+  <p style="color:red; font-weight: 400;" *ngIf="password.touched && password.errors?.minlength">You should enter at least 6 characters</p>
+
+  <small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
+      At least 6 characters
+  </small>
+   <!-- confirm Password -->
+  <input ngModel name="passwordConfirm" #passwordConfirm="ngModel" #passwordConfirm="ngModel" type="password"  class="form-control" placeholder="Confirm Password" aria-describedby="defaultRegisterFormPasswordHelpBlock" required>
+  <p style="color:red; font-weight: 400;" *ngIf="passwordConfirm.invalid  && passwordConfirm.touched">Last Name is Required</p>
+  <p style="color:red; font-weight: 400;" *ngIf="passwordConfirm.value !== password.value && passwordConfirm.touched">Password isn't the same</p>
+  <br>
+  <!-- Phone number -->
+  <input ngModel name="phoneNumber" #phoneNumber="ngModel" type="text"  class="form-control" placeholder="Phone Number" aria-describedby="defaultRegisterFormPhoneHelpBlock" required>
+  <p style="color:red; font-weight: 400;" *ngIf="phoneNumber.invalid  && phoneNumber.touched">Last Name is Required</p>
+
+  <small id="defaultRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4">
+      Optional - for two step authentication
+  </small>
+
+  <!-- Newsletter -->
+  <div class="custom-control custom-checkbox">
+      <input type="checkbox" class="custom-control-input" id="defaultRegisterFormNewsletter">
+      <label class="custom-control-label" for="defaultRegisterFormNewsletter">Subscribe to our newsletter</label>
+  </div>
+
+  <!-- Sign up button -->
+  <button class="btn btn-info my-4 btn-block" type="submit" [disabled]="f.invalid || passwordConfirm.value !== password.value">Sign in</button>
+  <br>
+  <a class="alert alert-success" routerLink='/login'>already have an accound</a>
+  <br>
+  <br>
+  <div class="alert alert-danger" *ngIf="errorMessage">{{ errorMessage }}</div>
+  <!-- Social register -->
+  <p>or sign up with:</p>
+
+  <a href="#" class="mx-2" role="button"><i class="fab fa-facebook-f light-blue-text"></i></a>
+  <a href="#" class="mx-2" role="button"><i class="fab fa-twitter light-blue-text"></i></a>
+  <a href="#" class="mx-2" role="button"><i class="fab fa-linkedin-in light-blue-text"></i></a>
+  <a href="#" class="mx-2" role="button"><i class="fab fa-github light-blue-text"></i></a>
+
+  <hr>
+
+  <!-- Terms of service -->
+  <p>By clicking
+      <em>Sign up</em> you agree to our
+      <a href="" target="_blank">terms of service</a>
+
+</form>
+<!-- Default form register -->
+
+</body>

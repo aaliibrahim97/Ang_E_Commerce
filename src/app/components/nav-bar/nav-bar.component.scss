@@ -1,0 +1,27 @@
+.navbarcustom {
+  display: unset;
+  position: absolute !important;
+  z-index: 1 !important;
+  width: 100% !important;
+}
+.navbar {
+  box-shadow:none !important;
+}
+a.nav-link.waves-light {
+  color: #bac4cc !important;
+  font-weight: 400;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+}
+a.nav-link.waves-light:hover {
+  color: orange !important;
+}
+.logo {
+  width: 58px;
+  height: 57px;
+  margin-left: 68px;
+}
+
+.navbar-nav.mr-auto{
+  padding-left: 360px !important;
+}
